@@ -7,7 +7,6 @@
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "useUnknownInCatchVariables": false,
-    "strictPropertyInitialization": false,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
@@ -17,10 +16,8 @@
     "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,
-    "resolveJsonModule": true,
     "moduleResolution": "node",
     "importHelpers": true,
-    "allowSyntheticDefaultImports": true,
     "target": "es2017",
     "module": "es2020",
     "lib": [

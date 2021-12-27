@@ -1,0 +1,33 @@
+<!-- dialog-box.component.html -->
+<h1 mat-dialog-title>Row Action :: <strong>{{action}}</strong></h1>
+
+<div mat-dialog-content>
+
+  <mat-form-field class="example-full-width" appearance="fill"  *ngIf="action != 'Delete'; else elseTemplate">
+    <mat-label>Search</mat-label>
+    <input type="text"
+           placeholder="Pick one"
+           aria-label="Number"
+           matInput [(ngModel)]="local_data.name"
+           [formControl]="myControl"
+           [matAutocomplete]="auto" > 
+    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+      <mat-option *ngFor="let option of filteredOptions | async" [value]="option.value+'$$$' +option.name">
+        {{option.name}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+  <button mat-mini-fab color="accent" aria-label="Example icon button with a plus one icon" (click)="startService()">
+<mat-icon>mic_none</mat-icon></button>
+  <ng-template #elseTemplate>
+    Sure to delete <b>{{local_data.name}}</b>?
+  </ng-template>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="doAction()">{{action}}</button>
+  <button mat-button (click)="closeDialog()" mat-flat-button color="warn">Cancel</button>
+</div>
+
+
+
+

@@ -266,8 +266,7 @@ table {
       margin-left: 72px;
     }
 
-    svg#rocket-smoke {
-      right: 120px;
+    svg#rocket-smoke {      right: 120px;
       transform: rotate(-5deg);
     }
   }
